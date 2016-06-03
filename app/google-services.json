@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "371995323439",
+    "firebase_url": "https://whatplace-f0243.firebaseio.com",
+    "project_id": "whatplace-f0243",
+    "storage_bucket": "whatplace-f0243.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371995323439:android:fe9dc70454497251",
+        "android_client_info": {
+          "package_name": "com.beraaksoy.whatplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371995323439-jc60jn8gqf4e9i362oravo8om6rosvgs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyIWzJ-vavGeysuY7UareZY-FeltUEvQU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

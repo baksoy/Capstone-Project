@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2015 Google Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<resources>
+    <color name="dark_grey">#424242</color>
+    <color name="button_grey">#757575</color>
+
+
+    <color name="primaryColor">#e64a19</color>
+    <color name="primaryColorDark">#bf360c</color>
+    <color name="primaryAccent">#26a69a</color>
+    <!--<color name="primaryAccent">#FF00B0FF</color>-->
+
+
+    <color name="Gold">#FFD700</color>
+    <color name="Pink">#FFC0CB</color>
+    <color name="LightSalmon">#FFA07A</color>
+    <color name="HotPink">#FF69B4</color>
+    <color name="Tomato">#FF6347</color>
+    <color name="OrangeRed">#FF4500</color>
+    <color name="Salmon">#FA8072</color>
+    <color name="SandyBrown">#F4A460</color>
+    <color name="Khaki">#F0E68C</color>
+    <color name="LightCoral">#F08080</color>
+    <color name="DarkSalmon">#E9967A</color>
+    <color name="BurlyWood">#DEB887</color>
+    <color name="Plum">#DDA0DD</color>
+    <color name="PaleVioletRed">#DB7093</color>
+    <color name="Goldenrod">#DAA520</color>
+    <color name="Tan">#D2B48C</color>
+    <color name="Chocolate">#D2691E</color>
+    <color name="IndianRed">#CD5C5C</color>
+    <color name="Silver">#C0C0C0</color>
+    <color name="DarkKhaki">#BDB76B</color>
+    <color name="RosyBrown">#BC8F8F</color>
+    <color name="PowderBlue">#B0E0E6</color>
+    <color name="LightSteelBlue">#B0C4DE</color>
+    <color name="PaleTurquoise">#AFEEEE</color>
+    <color name="LightBlue">#ADD8E6</color>
+    <color name="DarkGray">#A9A9A9</color>
+    <color name="DarkSeaGreen">#8FBC8F</color>
+    <color name="SkyBlue">#87CEEB</color>
+    <color name="Gray">#808080</color>
+    <color name="Olive">#808000</color>
+    <color name="LightSlateGray">#778899</color>
+    <color name="MediumAquamarine">#66CDAA</color>
+    <color name="CornflowerBlue">#6495ED</color>
+    <color name="CadetBlue">#5F9EA0</color>
+    <color name="MediumTurquoise">#48D1CC</color>
+    <color name="SteelBlue">#4682B4</color>
+    <color name="RoyalBlue">#4169E1</color>
+    <color name="Turquoise">#40E0D0</color>
+    <color name="MediumSeaGreen">#3CB371</color>
+    <color name="LimeGreen">#32CD32</color>
+    <color name="LightSeaGreen">#20B2AA</color>
+    <color name="DodgerBlue">#1E90FF</color>
+    <color name="DeepSkyBlue">#00BFFF</color>
+
+
+    <integer-array name="initial_colors">
+        <item>@color/MediumTurquoise</item>
+        <item>@color/Salmon</item>
+        <item>@color/MediumSeaGreen</item>
+        <item>@color/SandyBrown</item>
+        <item>@color/PaleVioletRed</item>
+        <item>@color/DeepSkyBlue</item>
+        <item>@color/OrangeRed</item>
+        <item>@color/Goldenrod</item>
+        <item>@color/MediumAquamarine</item>
+        <item>@color/Khaki</item>
+        <item>@color/LightCoral</item>
+        <item>@color/DarkSalmon</item>
+        <item>@color/BurlyWood</item>
+        <item>@color/LightBlue</item>
+        <item>@color/Plum</item>
+        <item>@color/PaleVioletRed</item>
+        <item>@color/Silver</item>
+        <item>@color/PaleTurquoise</item>
+        <item>@color/Chocolate</item>
+        <item>@color/HotPink</item>
+        <item>@color/Tan</item>
+        <item>@color/LightSalmon</item>
+        <item>@color/IndianRed</item>
+        <item>@color/Gold</item>
+        <item>@color/DarkKhaki</item>
+        <item>@color/DarkSeaGreen</item>
+        <item>@color/RosyBrown</item>
+        <item>@color/Olive</item>
+        <item>@color/PowderBlue</item>
+        <item>@color/DarkGray</item>
+        <item>@color/Turquoise</item>
+        <item>@color/LightSteelBlue</item>
+        <item>@color/CornflowerBlue</item>
+        <item>@color/Tomato</item>
+        <item>@color/SkyBlue</item>
+        <item>@color/Gray</item>
+        <item>@color/LightSlateGray</item>
+        <item>@color/Pink</item>
+        <item>@color/CadetBlue</item>
+        <item>@color/SteelBlue</item>
+        <item>@color/RoyalBlue</item>
+        <item>@color/LimeGreen</item>
+        <item>@color/LightSeaGreen</item>
+        <item>@color/DodgerBlue</item>
+    </integer-array>
+
+</resources>

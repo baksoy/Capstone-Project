@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">"WhatPlace"</string>
+    <string name="action_settings">Settings</string>
+    <string name="item_title">Fresh Market</string>
+    <string name="item_desc">Fresh Market is our neighborhood food market and premium quality local produce store.
+    </string>
+    <string name="main_search_name">Search</string>
+    <string name="delete">Delete</string>
+    <string name="place_photo">Place Photo</string>
+    <string name="add_favorite">Make Place Favorite</string>
+    <string name="title_activity_place_add">Add New Place</string>
+    <string name="place">Place:</string>
+    <string name="address">Address:</string>
+    <string name="initial">F</string>
+    <string name="phone">Phone:</string>
+    <string name="website">Website:</string>
+    <string name="memo">Memo:</string>
+    <string name="add_new_place">Add New Place</string>
+    <string name="update_or_save_place_information">Update or Save Place Information</string>
+    <string name="deleted_place_message">Place Deleted!</string>
+    <string name="added_favorites_message">Added to Favorite</string>
+    <string name="add_widget">Add widget</string>
+    <string name="whatplace_widget">WhatPlace Widget</string>
+
+    <!--Replace with your own AdMob ad unit id. -->
+    <string name="ad_unit_id">ca-app-pub-4083710090775748/7335309715</string>
+</resources>
