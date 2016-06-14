@@ -106,7 +106,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         final TextView phone;
         final TextView website;
         final TextView memo;
-        final ImageView photoView;
+        final SimpleDraweeView photoView;
         final TextView placeInitialView;
 
         public PlaceViewHolder(final View itemView) {
@@ -116,7 +116,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             phone = (TextView) itemView.findViewById(R.id.place_phone);
             website = (TextView) itemView.findViewById(R.id.place_website);
             memo = (TextView) itemView.findViewById(R.id.place_memo);
-            photoView = (ImageView) itemView.findViewById(R.id.place_photo_view);
+            photoView = (SimpleDraweeView) itemView.findViewById(R.id.place_photo_view);
             placeInitialView = (TextView) itemView.findViewById(R.id.place_initial);
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -128,18 +128,12 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
                 }
             });
 
-            // DELETE Place - Show Snackbar message when place is deleted
+            // DELETE Place -
             Button button = (Button) itemView.findViewById(R.id.place_delete_button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int placeId = mPlaces.get(getAdapterPosition()).get_id();
-                    Uri uri = WhatPlaceContract.Places.buildPlaceUri(String.valueOf(placeId));
-                    mPlaces.remove(mPlaces.get(getAdapterPosition()));
-                    mContentResolver.delete(uri, null, null);
-                    notifyItemRemoved(getAdapterPosition());
-                    Snackbar.make(v, R.string.deleted_place_message,
-                            Snackbar.LENGTH_LONG).show();
+                    confirmDeleteAlertDialog();
                 }
             });
 
@@ -153,6 +147,37 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
                             Snackbar.LENGTH_LONG).show();
                 }
             });
+        }
+
+        // Make sure the user wants to delete a Place
+        private void confirmDeleteAlertDialog() {
+            AlertDialog alertDialog = new AlertDialog.Builder(itemView.getContext()).create();
+            alertDialog.setTitle("Confirm Delete");
+            alertDialog.setMessage("Are you sure you want to delete this Place?");
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "CANCEL",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    }
+            );
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "YES",
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int placeId = mPlaces.get(getAdapterPosition()).get_id();
+                            mPlaces.remove(mPlaces.get(getAdapterPosition()));
+                            Uri uri = WhatPlaceContract.Places.buildPlaceUri(String.valueOf(placeId));
+                            mContentResolver.delete(uri, null, null);
+                            notifyItemRemoved(getAdapterPosition());
+                            // Show Snackbar message when place is deleted
+                            Snackbar.make(itemView, R.string.deleted_place_message,
+                                    Snackbar.LENGTH_LONG).show();
+                        }
+                    }
+            );
+            alertDialog.show();
         }
     }
 }
