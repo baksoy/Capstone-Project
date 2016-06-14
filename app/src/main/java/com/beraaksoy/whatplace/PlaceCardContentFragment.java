@@ -27,17 +27,16 @@ public class PlaceCardContentFragment extends Fragment implements LoaderManager.
 
     private static final String TAG = PlaceCardContentFragment.class.getSimpleName();
     @BindView(R.id.my_recycler_view)
-    RecyclerView myRecyclerView;
+    private RecyclerView myRecyclerView;
     private ContentResolver mContentResolver;
     private PlaceAdapter mAdapter;
-    private RecyclerView recyclerView;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mContentResolver = getActivity().getContentResolver();
         mAdapter = new PlaceAdapter(getActivity());
-        recyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
         getLoaderManager().initLoader(R.id.place_loader_id, null, this);
         // if you want to get a hold of the loader object uncomment next line
         // mLoader = (PlaceListLoader) getLoaderManager().initLoader(LOADER_ID, null, this);
@@ -46,12 +45,12 @@ public class PlaceCardContentFragment extends Fragment implements LoaderManager.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        recyclerView = (RecyclerView) inflater.inflate(
+        mRecyclerView = (RecyclerView) inflater.inflate(
                 R.layout.recycler_view, container, false);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        ButterKnife.bind(this, recyclerView);
-        return recyclerView;
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        ButterKnife.bind(this, mRecyclerView);
+        return mRecyclerView;
     }
 
     // Instantiate and return a loader with a given ID
@@ -65,11 +64,13 @@ public class PlaceCardContentFragment extends Fragment implements LoaderManager.
     // Called when our loader has finished its load
     @Override
     public void onLoadFinished(Loader<List<Place>> loader, List<Place> places) {
+        mAdapter.notifyItemInserted(mAdapter.getItemCount());
         mAdapter.setData(places);
+        //mRecyclerView.smoothScrollToPosition(mAdapter.getItemCount() - 1);
+        mRecyclerView.scrollToPosition(mAdapter.getItemCount() - 1);
     }
 
     @Override
     public void onLoaderReset(Loader<List<Place>> loader) {
-
     }
 }
