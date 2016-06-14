@@ -61,9 +61,9 @@ public class PlaceType {
                 case PlaceType.TYPE_POINT_OF_INTEREST:
                     placeTypesString.add("POINT OF INTEREST");
                     break;
-                // default:
-                //    placeTypesString.add("UNKNOWN");
-                //    break;
+                default:
+                    placeTypesString.add("UNKNOWN");
+                    break;
             }
         }
         return placeTypesString;
